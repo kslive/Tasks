@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		6B23010C24F5187C00B9B11A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B23010B24F5187B00B9B11A /* AppDelegate.swift */; };
 		6B23010E24F5187C00B9B11A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B23010D24F5187C00B9B11A /* SceneDelegate.swift */; };
-		6B23011024F5187C00B9B11A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B23010F24F5187C00B9B11A /* ViewController.swift */; };
+		6B23011024F5187C00B9B11A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B23010F24F5187C00B9B11A /* LoginViewController.swift */; };
 		6B23011324F5187C00B9B11A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B23011124F5187C00B9B11A /* Main.storyboard */; };
 		6B23011524F5187D00B9B11A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B23011424F5187D00B9B11A /* Assets.xcassets */; };
 		6B23011824F5187D00B9B11A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B23011624F5187D00B9B11A /* LaunchScreen.storyboard */; };
+		6B23012124F5205600B9B11A /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B23012024F5205600B9B11A /* TasksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B23010824F5187B00B9B11A /* Tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B23010B24F5187B00B9B11A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B23010D24F5187C00B9B11A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6B23010F24F5187C00B9B11A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6B23010F24F5187C00B9B11A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6B23011224F5187C00B9B11A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B23011424F5187D00B9B11A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B23011724F5187D00B9B11A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B23011924F5187D00B9B11A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B23012024F5205600B9B11A /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		6B23010A24F5187B00B9B11A /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				6B23010B24F5187B00B9B11A /* AppDelegate.swift */,
-				6B23010D24F5187C00B9B11A /* SceneDelegate.swift */,
-				6B23010F24F5187C00B9B11A /* ViewController.swift */,
-				6B23011124F5187C00B9B11A /* Main.storyboard */,
-				6B23011424F5187D00B9B11A /* Assets.xcassets */,
-				6B23011624F5187D00B9B11A /* LaunchScreen.storyboard */,
-				6B23011924F5187D00B9B11A /* Info.plist */,
+				6B23012524F520F700B9B11A /* Supporting Files */,
+				6B23012324F520CB00B9B11A /* Models */,
+				6B23012224F520C100B9B11A /* Views */,
+				6B23011F24F5203E00B9B11A /* Controllers */,
 			);
 			path = Tasks;
+			sourceTree = "<group>";
+		};
+		6B23011F24F5203E00B9B11A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6B23010F24F5187C00B9B11A /* LoginViewController.swift */,
+				6B23012024F5205600B9B11A /* TasksViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6B23012224F520C100B9B11A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6B23011124F5187C00B9B11A /* Main.storyboard */,
+				6B23011624F5187D00B9B11A /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6B23012324F520CB00B9B11A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6B23012524F520F700B9B11A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B23010B24F5187B00B9B11A /* AppDelegate.swift */,
+				6B23010D24F5187C00B9B11A /* SceneDelegate.swift */,
+				6B23011424F5187D00B9B11A /* Assets.xcassets */,
+				6B23011924F5187D00B9B11A /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +173,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B23011024F5187C00B9B11A /* ViewController.swift in Sources */,
+				6B23011024F5187C00B9B11A /* LoginViewController.swift in Sources */,
+				6B23012124F5205600B9B11A /* TasksViewController.swift in Sources */,
 				6B23010C24F5187C00B9B11A /* AppDelegate.swift in Sources */,
 				6B23010E24F5187C00B9B11A /* SceneDelegate.swift in Sources */,
 			);
@@ -286,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2PAJC487U;
-				INFOPLIST_FILE = Tasks/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Tasks/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,7 +341,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2PAJC487U;
-				INFOPLIST_FILE = Tasks/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Tasks/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

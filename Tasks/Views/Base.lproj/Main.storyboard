@@ -54,7 +54,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vVt-8V-jFc"/>
-                                                    <segue destination="QeT-SJ-NiV" kind="show" identifier="tasksSegue" id="zHK-wE-U1r"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHj-x9-Gdm">
@@ -118,6 +117,7 @@
                         <outlet property="passwordTextField" destination="rQW-mG-xIz" id="ZqD-HF-oKU"/>
                         <outlet property="scrollView" destination="BzU-Na-k14" id="y1G-S9-Ofg"/>
                         <outlet property="warningLabel" destination="dB2-D5-bGh" id="4Sp-wO-Mly"/>
+                        <segue destination="QeT-SJ-NiV" kind="show" identifier="tasksSegue" id="Ju0-1S-LMf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -163,6 +163,11 @@
                         <viewLayoutGuide key="safeArea" id="YQS-kS-bk1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tasks" id="Uf4-X6-FoX">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="32z-Tw-xmS">
+                            <connections>
+                                <action selector="signOut:" destination="XdL-jU-cyH" id="KeU-q7-eJK"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="I89-SZ-A2M">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>

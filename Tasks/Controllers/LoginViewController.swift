@@ -12,6 +12,7 @@ import Firebase
 class LoginViewController: UIViewController {
     
     let segueIdentifier = "tasksSegue"
+    var ref: DatabaseReference!
 
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
@@ -21,6 +22,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ref = Database.database().reference(withPath: "users")
         warningLabel.alpha = 0
         setObserver()
         setUser()
@@ -65,16 +67,15 @@ class LoginViewController: UIViewController {
             return
         }
         
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] (user, error) in
     
-            if error == nil {
-                if user != nil {
-                } else {
-                    print("error")
-                }
-            } else {
+            guard error == nil, user != nil else {
                 print(error!.localizedDescription)
+                return
             }
+            
+            let userRef = self?.ref.child((user?.user.uid)!)
+            userRef?.setValue(["email": user?.user.email])
         }
     }
     
